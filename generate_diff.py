@@ -5,16 +5,16 @@ import matplotlib
 import matplotlib.pyplot as plt
 import numpy as np
 
-FILE_BEFORE_OPTI = "examples/before.txt"
-FILE_AFTER_OPTI = "examples/after.txt"
+FILE_BEFORE = "examples/before.txt"
+FILE_AFTER = "examples/after.txt"
 # Specify the file where your labels are. If None, take range(1, len(line in before file))
 LABEL_FILE = None
 
-LABEL_BEFORE = "Before optimization"
-LABEL_AFTER = "After optimization"
+LABEL_BEFORE = "Before"
+LABEL_AFTER = "After"
 X_LABEL = "Number of iteration"
 Y_LABEL = "Seconds"
-TITLE = "Evoltion of time before and after the optimization"
+TITLE = "Evoltion of time before and after my changes"
 
 # Size of the matplotlib figure
 HEIGHT = 10
@@ -43,8 +43,8 @@ def autolabel(rects, ax):
                     ha='center', va='bottom')
 
 def show_figure(output: str = None):
-    before = read_file(FILE_BEFORE_OPTI)
-    after = read_file(FILE_AFTER_OPTI)
+    before = read_file(FILE_BEFORE)
+    after = read_file(FILE_AFTER)
 
     labels = get_labels(before, after)
 
